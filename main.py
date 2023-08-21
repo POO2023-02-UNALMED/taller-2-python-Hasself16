@@ -36,6 +36,6 @@ class Auto:
 def verificarIntegridad(piezas):
     registros = [pieza.registro for pieza in piezas]
     if all(registro == registros[0] for registro in registros):
-        return "Auto original"
+        return ("Auto original")
     else:
-        return "Las piezas no son originales"
+        return ("Las piezas no son originales")
