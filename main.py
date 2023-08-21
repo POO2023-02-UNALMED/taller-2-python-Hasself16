@@ -31,15 +31,13 @@ class Motor:
         else:
             self.tipo=tipo
 
-class auto:
+class Auto:
     cantidadCreados=3
-    def __init__(self, modelo, precio, asientos, marca, motor, registro, cantidadCreados)
+    def __init__(self, modelo, precio, asientos, marca, motor, registro, cantidadCreados):
         self.modelo=modelo
         self.precio=precio
         self.asientos=Asiento
         self.marca=marca
         self.motor=motor
         self.registro=registro
-        auto.cantidadCreados= cantidadCreados
-    
-    def verificarIntegridad(self):
+        Auto.cantidadCreados= cantidadCreados
