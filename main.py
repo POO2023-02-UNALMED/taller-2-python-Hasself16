@@ -42,8 +42,8 @@ class Auto:
     
     def verificarIntegridad(self):
         registros = [self.registro]
-        for asiento in self.asientos:
-            registros.append(asiento.registro)
+        for Asiento in self.asientos:
+            registros.append(Asiento.registro)
         registros.append(self.motor.registro)
         
         if all(registro == registros[0] for registro in registros):
