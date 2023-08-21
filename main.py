@@ -32,3 +32,10 @@ class Auto:
         self.marca=marca
         self.motor=motor
         self.registro=registro
+    
+    def verificarIntegridad(piezas):
+        registros = [pieza.registro for pieza in piezas]
+        if all(registro == registros[0] for registro in registros):
+            return "Auto original"
+        else:
+            return "Las piezas no son originales"
