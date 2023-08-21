@@ -6,12 +6,8 @@ class Asiento:
 
     def cambiarColor(self, color):
         colores=["rojo", "verde", "amarillo", "negro", "blanco"]
-        color=input()
-        if color not in colores:
-            print("No se puede poner este color")
-        else:
+        if color in colores:
             self.color = color
-            print(f"El color ha cambiado a {self.color}")
 
 class Motor:
     def __init__(self, numeroCilindros, tipo, registro):
@@ -20,19 +16,15 @@ class Motor:
         self.registro=registro
     
     def cambiarRegistro(self, registro):
-        registro=int(input())
         self.registro= registro
     
     def asignarTipo(self, tipo):
         tipos=["electrico", "gasolina"]
-        tipo=input()
-        if tipo not in tipos:
-            print("No se puede cambiar a este tipo.")
-        else:
+        if tipo in tipos:
             self.tipo=tipo
-
+            
 class Auto:
-    cantidadCreados=3
+    cantidadCreados=0
     def __init__(self, modelo, precio, asientos, marca, motor, registro, cantidadCreados):
         self.modelo=modelo
         self.precio=precio
@@ -40,4 +32,4 @@ class Auto:
         self.marca=marca
         self.motor=motor
         self.registro=registro
-        self.cantidadCreados= cantidadCreados
+        Auto.cantidadCreados=cantidadCreados
