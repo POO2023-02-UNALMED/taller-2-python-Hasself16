@@ -33,8 +33,8 @@ class Auto:
         self.motor=motor
         self.registro=registro
     
-    def verificarIntegridad(self,registros):
-        if (registros.registro == registros.motor.registro) and (registros.registro==registros.asientos.registro):
+    def verificarIntegridad(self,Auto):
+        if (Auto.registro == Auto.motor.registro) and (Auto.registro==Auto.asientos.registro):
             return("Auto original")
         else:
             return("Las piezas no son originales")
