@@ -40,4 +40,4 @@ class Auto:
         self.marca=marca
         self.motor=motor
         self.registro=registro
-        Auto.cantidadCreados= cantidadCreados
+        self.cantidadCreados= cantidadCreados
