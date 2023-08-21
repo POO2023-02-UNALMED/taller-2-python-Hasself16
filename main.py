@@ -33,6 +33,13 @@ class Auto:
         self.motor=motor
         self.registro=registro
     
+    def cantidadAsientos(self):
+        count = 0
+        for asiento in self.asientos:
+            if isinstance(asiento, Asiento):
+                count += 1
+        return count 
+    
     def verificarIntegridad(self):
         if (self.registro == self.motor.registro):
             return("Auto original")
