@@ -2,7 +2,7 @@ class Asiento:
     def __init__(self, color, precio, registro):
         self.color=color
         self.precio=precio
-        self.registo=registro
+        self.registro=registro
 
     def cambiarColor(self, color):
         colores=["rojo", "verde", "amarillo", "negro", "blanco"]
@@ -43,7 +43,7 @@ class Auto:
     def verificarIntegridad(self):
         registros = [self.registro]
         for asiento in self.asientos:
-            registros.append(Asiento.registro)
+            registros.append(asiento.registro)
         registros.append(self.motor.registro)
         
         if all(registro == registros[0] for registro in registros):
